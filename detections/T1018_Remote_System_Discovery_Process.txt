@@ -18,3 +18,5 @@ Sysmon
 or Image  contains "ping.exe") 
 and (CommandLine contains "view"
 or CommandLine contains "ping")
+| extend AccountCustomEntity = UserName
+| extend HostCustomEntity = Computer
