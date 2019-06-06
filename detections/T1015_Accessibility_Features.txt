@@ -22,3 +22,5 @@ or Image  contains "magnify.exe"
 or Image  contains "displayswitch.exe" 
 or Image  contains "narrator.exe" 
 or Image  contains "atbroker.exe")
+| extend AccountCustomEntity = UserName
+| extend HostCustomEntity = Computer
