@@ -17,3 +17,5 @@
 Sysmon
 | where (EventID == 12 or EventID == 13 or EventID == 14)
 and TargetObject contains "\\SYSTEM\\CurrentControlSet\\Control\\Print\\Monitors\\"
+| extend AccountCustomEntity = UserName
+| extend HostCustomEntity = Computer
