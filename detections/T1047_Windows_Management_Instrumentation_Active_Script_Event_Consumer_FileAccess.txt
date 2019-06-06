@@ -15,3 +15,5 @@
 //
 Sysmon
 | where EventID == 11 and CommandLine contains "C:\\WINDOWS\\system32\\wbem\\scrcons.exe"
+| extend AccountCustomEntity = UserName
+| extend HostCustomEntity = Computer
