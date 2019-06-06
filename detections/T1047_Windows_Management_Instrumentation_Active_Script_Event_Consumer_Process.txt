@@ -16,3 +16,5 @@
 Sysmon
 | where EventID == 1 and (ParentCommandLine contains "C:\\Windows\\System32\\svchost.exe"
 or CommandLine contains "C:\\WINDOWS\\system32\\wbem\\scrcons.exe")
+| extend AccountCustomEntity = UserName
+| extend HostCustomEntity = Computer
