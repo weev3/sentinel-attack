@@ -13,10 +13,10 @@
 //
 // Tactics: #Discovery
 //
-SysmonOSSEM 
-| where event_id == 1 and(process_path contains "net.exe"
-and process_command_line contains "config") 
-or (process_path contains "ipconfig.exe"
-or process_path contains "netsh.exe" 
-or process_path contains "arp.exe"
-or process_path contains "nbtstat.exe")
+Sysmon 
+| where EventID == 1 and(Image  contains "net.exe"
+and CommandLine contains "config") 
+or (Image  contains "ipconfig.exe"
+or Image  contains "netsh.exe" 
+or Image  contains "arp.exe"
+or Image  contains "nbtstat.exe")
